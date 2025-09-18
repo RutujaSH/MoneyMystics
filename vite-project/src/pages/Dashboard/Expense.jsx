@@ -147,7 +147,10 @@ const Expense = () => {
           onClose={() => setOpenAddExpenseModel(false)}
           title="Add Expense"
         >
-          <AddExpenseForm onAddExpense={handleAddExpense} />
+          <AddExpenseForm
+            onAddExpense={handleAddExpense}
+            existingExpenseData={expenseData}
+          />
         </Modal>
 
         <Modal

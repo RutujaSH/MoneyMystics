@@ -26,9 +26,23 @@ export const addThousandsSeparator = (num) => {
 };
 
 export const prepareExpenseBarChartData = (data = []) => {
-  const chartData = data.map((item) => ({
-    category: item?.category,
-    amount: item?.amount,
+  // Group transactions by category
+  const grouped = data.reduce((acc, item) => {
+    const category = item?.category || "Others";
+
+    if (!acc[category]) {
+      acc[category] = 0;
+    }
+
+    acc[category] += item?.amount || 0;
+
+    return acc;
+  }, {});
+
+  // Convert to array for the chart
+  const chartData = Object.entries(grouped).map(([category, amount]) => ({
+    category,
+    amount,
   }));
 
   return chartData;

@@ -146,7 +146,10 @@ const Income = () => {
           onClose={() => setOpenAddIncomeModel(false)}
           title="Add Income"
         >
-          <AddIncomeForm onAddIncome={handleAddIncome} />
+          <AddIncomeForm
+            onAddIncome={handleAddIncome}
+            existingIncomeData={incomeData}
+          />
         </Modal>
 
         <Modal
