@@ -8,7 +8,7 @@ import InfoCard from "../../components/Cards/InfoCard";
 import { LuHandCoins, LuWalletMinimal } from "react-icons/lu";
 import { IoMdCard } from "react-icons/io";
 import { addThousandsSeparator } from "../../utils/helper";
-import RecentTransactions from "../../components/Dashboard/recentTransactions";
+import RecentTransaction from "../../components/Dashboard/RecentTransaction";
 import FinanceOverview from "../../components/Dashboard/FinanceOverview";
 import ExpenseTransaction from "../../components/Dashboard/ExpenseTransaction";
 import Last30DaysExpenses from "../../components/Dashboard/Last30DaysExpenses";
@@ -70,7 +70,7 @@ const Home = () => {
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          <RecentTransactions
+          <RecentTransaction
             transactions={dashboardData?.recentTransactions}
             onSeeMore={() => navigate("/expense")}
           />

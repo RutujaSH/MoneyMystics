@@ -3,7 +3,7 @@ import { LuArrowRight } from "react-icons/lu";
 import moment from "moment";
 import TransactionInfoCard from "../Cards/TransactionInfoCard";
 
-const RecentTransactions = ({ transactions, onSeeMore }) => {
+const RecentTransaction = ({ transactions, onSeeMore }) => {
   return (
     <div className="card">
       <div className="flex items-center justify-between">
@@ -29,4 +29,4 @@ const RecentTransactions = ({ transactions, onSeeMore }) => {
   );
 };
 
-export default RecentTransactions;
+export default RecentTransaction;
