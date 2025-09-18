@@ -18,11 +18,11 @@ const CustomLineChart = ({ data }) => {
           <p className="text-xs font-semibold text-purple-800 mb-1">{date}</p>
           <p className="text-sm text-gray-600 mb-1">
             Total:{" "}
-            <span className="text-sm font-medium text-gray-900">${amount}</span>
+            <span className="text-sm font-medium text-gray-900">₹{amount}</span>
           </p>
           {categories?.map((c, i) => (
             <p key={i} className="text-xs text-gray-500">
-              {c.category}: ${c.amount}
+              {c.category}: ₹{c.amount}
             </p>
           ))}
         </div>

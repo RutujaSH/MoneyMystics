@@ -28,7 +28,7 @@ const CustomBarChart = ({ data, xAxisKey = "category" }) => {
           </p>
 
           <p className="text-sm font-medium text-gray-900 mb-2">
-            Total: ${data.amount}
+            Total: ₹{data.amount}
           </p>
 
           {data.details?.length > 0 && (
@@ -36,7 +36,7 @@ const CustomBarChart = ({ data, xAxisKey = "category" }) => {
               {data.details.map((inc, i) => (
                 <li key={i}>
                   {inc.source}:{" "}
-                  <span className="font-medium">${inc.amount}</span>
+                  <span className="font-medium">₹{inc.amount}</span>
                 </li>
               ))}
             </ul>
